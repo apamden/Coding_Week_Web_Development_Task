@@ -1,0 +1,83 @@
+h1{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.container{
+    background-image: url("cd_week.jpg");
+    height: 120px;
+}
+input{
+    width: 60%;
+    position: relative;
+    left: 18%;
+    height: 25px;
+}
+h2{
+    position: absolute;
+    right:2%;
+    top:2%;
+    color: white;
+    
+}
+#search{
+    position: absolute;
+    left: 16%;
+    top:105px ;
+    font-size: 22px;
+}
+#list{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+
+}
+.title{
+    color: brown;
+    font-size: 22px;
+}
+.item{
+    border: 2px solid black;
+    margin-top: 1.5em;
+    background-color: rgba(74, 197, 234, 0.541);
+}
+.pic{
+    width: 150px;
+    height: 150px;
+}
+#list {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 30px;
+}
+
+.item {
+    list-style-type: none;
+    background-color: #84b3e9;
+    border-radius: 3px;
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        'title image'
+        'description image';
+    text-align: left;
+}
+
+.item > h2 {
+    grid-area: title;
+    margin-top: -12px;
+}
+
+.item > p {
+    grid-area:description;
+    margin: 0;
+    margin-top: -22px;
+}
+
+.item > pic {
+    max-height: 120px;
+    grid-area: image;
+    margin-right: -20px;
+}
